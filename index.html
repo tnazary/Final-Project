@@ -5,40 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tabish's Personal Website">
     <title>Tabish's Personal Website</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         /* General Styles */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             background-color: #f9f9f9;
+            color: #333;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         header {
-            background-color: #333;
+            background-color: #000;
             color: white;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         nav ul {
             list-style: none;
             padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline;
-            margin: 0 15px;
+            margin: 0 20px;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
         }
 
         nav ul li a:hover {
-            text-decoration: underline;
+            color: #888;
         }
 
         /* Section Styles */
@@ -47,21 +59,30 @@
             margin: 1rem auto;
             max-width: 900px;
             background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         section h1 {
-            color: #333;
+            color: #000;
             margin-bottom: 1rem;
             text-align: center;
+            font-weight: 600;
+        }
+
+        section p {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
         }
 
         #about img {
             display: block;
             margin: 1rem auto;
             border-radius: 50%;
-            border: 3px solid #ddd;
+            border: 5px solid #ddd;
+            width: 150px;
+            height: 150px;
         }
 
         /* Table Styles */
@@ -76,8 +97,23 @@
         }
 
         th, td {
-            padding: 0.5rem;
+            padding: 0.8rem;
             text-align: left;
+        }
+
+        th {
+            background-color: #000;
+            color: white;
+        }
+
+        td a {
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        td a:hover {
+            text-decoration: underline;
         }
 
         /* Gallery Styles */
@@ -85,23 +121,43 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 1rem;
+            gap: 1.5rem;
         }
 
         .gallery img {
-            border: 2px solid #ddd;
-            border-radius: 5px;
-            width: 300px;
-            height: 200px;
+            border: 3px solid #ddd;
+            border-radius: 12px;
+            width: 250px;
+            height: 150px;
             object-fit: cover;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Footer */
         footer {
             text-align: center;
-            background-color: #333;
+            background-color: #000;
             color: white;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -123,7 +179,7 @@
         <h1>About Me</h1>
         <p>Hi! I'm Tabish, a passionate individual interested in photography and UX/UI design. Though I’ve only just started my photography journey, I’m excited to capture the world through my lens. I was born in Canada, but my roots are in Afghanistan, giving me a blend of diverse cultural experiences.</p>
         <p>Besides photography, I love singing and staying active by playing sports like volleyball, basketball, and table tennis. Welcome to my personal space!</p>
-        <img src="tabish.jpeg" alt="Tabish's Photo" width="200" height="200">
+        <img src="tabish.jpeg" alt="Tabish's Photo">
     </section>
 
     <!-- Portfolio Section -->
@@ -140,13 +196,13 @@
             <tbody>
                 <tr>
                     <td>Photography Portfolio</td>
-                    <td>A showcase of my best photos as I explore photography (password: Tabish).</td>
+                    <td>A showcase of my best photos (password: Tabish).</td>
                     <td><a href="https://giraffe-dove-s2he.squarespace.com" target="_blank">View</a></td>
                 </tr>
                 <tr>
                     <td>UX/UI Design Concept</td>
                     <td>A concept design for a mobile app focused on co-op housing.</td>
-                    <td><a href="https://www.figma.com/proto/43utt4fzKoGgri1SN7r3DA/GBDA210-group-project?page-id=138%3A63&node-id=760-8953&node-type=canvas&viewport=-499%2C623%2C0.12&t=31s3qirdcernSzTo-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=760%3A8953&show-proto-sidebar=1" target="_blank">View</a></td>
+                    <td><a href="https://www.figma.com/proto/43utt4fzKoGgri1SN7r3DA" target="_blank">View</a></td>
                 </tr>
             </tbody>
         </table>
@@ -156,9 +212,9 @@
     <section id="gallery">
         <h1>Gallery</h1>
         <div class="gallery">
-            <img src="image1.jpg" alt="Gallery Image 1">
-            <img src="image2.jpg" alt="Gallery Image 2">
-            <img src="image3.jpg" alt="Gallery Image 3">
+            <img src="image1.jpg" alt="Nature Landscape">
+            <img src="image2.jpg" alt="Urban Architecture">
+            <img src="image3.jpg" alt="Portrait Photography">
         </div>
     </section>
 
