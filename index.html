@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tabish's Personal Website">
+    <title>Tabish's Personal Website</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 900px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        section h1 {
+            color: #333;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        #about img {
+            display: block;
+            margin: 1rem auto;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+        }
+
+        /* Table Styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        /* Gallery Styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .gallery img {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h1>About Me</h1>
+        <p>Hi! I'm Tabish, a passionate individual interested in photography and UX/UI design. Though I’ve only just started my photography journey, I’m excited to capture the world through my lens. I was born in Canada, but my roots are in Afghanistan, giving me a blend of diverse cultural experiences.</p>
+        <p>Besides photography, I love singing and staying active by playing sports like volleyball, basketball, and table tennis. Welcome to my personal space!</p>
+        <img src="yourphoto.jpg" alt="Tabish's Photo" width="200" height="200">
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+        <h1>Portfolio</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Project</th>
+                    <th>Description</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Photography Portfolio</td>
+                    <td>A showcase of my best photos as I explore photography.</td>
+                    <td><a href="https://example.com" target="_blank">View</a></td>
+                </tr>
+                <tr>
+                    <td>UX/UI Design Concept</td>
+                    <td>A concept design for a mobile app focused on productivity.</td>
+                    <td><a href="https://example.com" target="_blank">View</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+        <h1>Gallery</h1>
+        <div class="gallery">
+            <img src="image1.jpg" alt="Gallery Image 1">
+            <img src="image2.jpg" alt="Gallery Image 2">
+            <img src="image3.jpg" alt="Gallery Image 3">
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>Email: <a href="mailto:tabish@example.com">tabish@example.com</a></p>
+        <p>Check out my <a href="https://github.com" target="_blank">GitHub</a> for more projects.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Tabish. All rights reserved.</p>
+    </footer>
+</body>
+</html>
