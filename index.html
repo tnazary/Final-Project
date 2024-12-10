@@ -14,15 +14,14 @@
         margin: 0;
         padding: 0;
         line-height: 1.6;
-        background: linear-gradient(120deg, #f8fbff, #eaf3ff, #d3e3f7);
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
+        background: white;
         color: #333;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
       }
 
       html {
         scroll-behavior: smooth;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
       }
 
       header {
@@ -64,10 +63,9 @@
         padding: 2rem;
         margin: 1rem auto;
         max-width: 900px;
-        background: rgba(255, 255, 255, 0.8);
+        background: rgba(255, 255, 255, 0.9);
         border-radius: 12px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
       }
 
       section h1 {
@@ -173,32 +171,32 @@
       /* Decorative Circles */
       .circle {
         position: absolute;
-        background: rgba(255, 255, 255, 0.3);
+        background: rgba(0, 0, 0, 0.05);
         border-radius: 50%;
-        filter: blur(100px);
         z-index: -1;
+        pointer-events: none;
       }
 
       .circle.one {
-        width: 300px;
-        height: 300px;
-        top: -50px;
-        left: -100px;
+        width: 200px;
+        height: 200px;
+        top: 10%;
+        left: 10%;
       }
 
       .circle.two {
-        width: 400px;
-        height: 400px;
-        bottom: -200px;
-        right: -100px;
+        width: 300px;
+        height: 300px;
+        bottom: 20%;
+        right: 5%;
       }
 
       .circle.three {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
         top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        left: 70%;
+        transform: translateY(-50%);
       }
     </style>
   </head>
