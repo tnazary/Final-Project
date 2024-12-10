@@ -25,9 +25,9 @@
       }
 
       header {
-        background: rgba(0, 0, 0, 0.8);
+        background: rgba(0, 0, 0, 0.8); /* Opaque background */
         color: white;
-        padding: 1.5rem 0;
+        padding: 1rem 0;
         text-align: center;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         position: sticky;
@@ -198,6 +198,20 @@
         left: 70%;
         transform: translateY(-50%);
       }
+
+      .circle.four {
+        width: 250px;
+        height: 250px;
+        top: 30%;
+        right: 15%;
+      }
+
+      .circle.five {
+        width: 100px;
+        height: 100px;
+        bottom: 10%;
+        left: 5%;
+      }
     </style>
   </head>
   <body>
@@ -205,6 +219,8 @@
     <div class="circle one"></div>
     <div class="circle two"></div>
     <div class="circle three"></div>
+    <div class="circle four"></div>
+    <div class="circle five"></div>
 
     <!-- Navigation Bar -->
     <header>
