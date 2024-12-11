@@ -1,292 +1,237 @@
 <!DOCTYPE html>
 <html lang="en-ca">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tabish's Personal Website">
-    <title>Tabish's Personal Website</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-      /* General Styles */
-      body {
-        font-family: 'Poppins', sans-serif;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-        background-color: #f9f9f9;
-        color: #333;
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Welcome to Tabish's personal website, showcasing his passion for photography, UX/UI design, and more.">
+  <meta name="author" content="Tabish">
+  <title>Tabish's Personal Website</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
 
-      html {
-        scroll-behavior: smooth;
-      }
+    html {
+      scroll-behavior: smooth;
+    }
 
-      header {
-        background-color: #000;
-        color: white;
-        padding: 1.5rem 0;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
+    header {
+      background-color: #000;
+      color: white;
+      padding: 1.5rem 0;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
 
-      nav ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        justify-content: center;
-      }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
 
-      nav ul li {
-        margin: 0 20px;
-      }
+    nav ul li {
+      margin: 0 20px;
+    }
 
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-weight: 600;
-        transition: color 0.3s;
-      }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
 
-      nav ul li a:hover {
-        color: #888;
-      }
+    nav ul li a:hover {
+      color: #888;
+    }
 
-      /* Section Styles */
-      section {
-        padding: 2rem;
-        margin: 1rem auto;
-        max-width: 900px;
-        background-color: white;
-        border-radius: 12px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
+    /* Section Styles */
+    section {
+      padding: 2rem;
+      margin: 1rem auto;
+      max-width: 900px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
 
-      section h1 {
-        color: #000;
-        margin-bottom: 1rem;
-        text-align: center;
-        font-weight: 600;
-      }
+    section h1 {
+      color: #000;
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: 600;
+    }
 
-      section p {
-        text-align: center;
-        margin-bottom: 1.5rem;
-        font-size: 1.1rem;
-      }
+    section p {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
 
-      #about img {
-        display: block;
-        margin: 1rem auto;
-        border-radius: 50%;
-        border: 5px solid #ddd;
-        width: 150px;
-        height: 150px;
-      }
+    #about img {
+      display: block;
+      margin: 1rem auto;
+      border-radius: 50%;
+      border: 5px solid #ddd;
+      width: 150px;
+      height: 150px;
+    }
 
-      /* Table Styles */
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 1rem 0;
-      }
+    /* Table Styles */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
 
-      table,
-      th,
-      td {
-        border: 1px solid #ddd;
-      }
+    table,
+    th,
+    td {
+      border: 1px solid #ddd;
+    }
 
-      th,
-      td {
-        padding: 0.8rem;
-        text-align: left;
-      }
+    th,
+    td {
+      padding: 0.8rem;
+      text-align: left;
+    }
 
-      th {
-        background-color: #000;
-        color: white;
-      }
+    th {
+      background-color: #000;
+      color: white;
+    }
 
-      td a {
-        color: #000;
-        text-decoration: none;
-        font-weight: bold;
-      }
+    td a {
+      color: #000;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-      td a:hover {
-        text-decoration: underline;
-      }
+    td a:hover {
+      text-decoration: underline;
+    }
 
-      /* Gallery Styles */
-      .gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 1.5rem;
-      }
+    /* Gallery Styles */
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+    }
 
-      .gallery img {
-        border: 3px solid #ddd;
-        border-radius: 12px;
-        width: 250px;
-        height: 150px;
-        object-fit: cover;
-        transition: transform 0.3s, box-shadow 0.3s;
-      }
+    .gallery img {
+      border: 3px solid #ddd;
+      border-radius: 12px;
+      width: 250px;
+      height: 150px;
+      object-fit: cover;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-      .gallery img:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
+    .gallery img:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 
-      /* Back to Top Button */
-      .back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #000;
-        color: white;
-        padding: 10px 15px;
-        border-radius: 5px;
-        text-decoration: none;
-        font-weight: bold;
-        display: none;
-        transition: background-color 0.3s;
-      }
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #000;
+      color: white;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+    }
 
-      .back-to-top:hover {
-        background-color: #333;
-      }
+    footer p {
+      margin: 0;
+    }
 
-      /* Footer */
-      footer {
-        text-align: center;
-        background-color: #000;
-        color: white;
-        padding: 1.5rem 0;
-        margin-top: 2rem;
-      }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
 
-      footer p {
-        margin: 0;
-      }
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-      footer a {
-        color: white;
-        text-decoration: none;
-      }
+  <!-- About Section -->
+  <section id="about">
+    <h1>About Me</h1>
+    <p> <strong>Hi!</strong> I'm Tabish, a <i>passionate</i> individual interested in photography and UX/UI design. Though I’ve only just started my photography journey, I’m excited to capture the world through my lens. I was born in Canada, but my roots are in Afghanistan, giving me a blend of diverse cultural experiences.</p>
+    <p>Besides photography, I love singing and staying active by playing sports like volleyball, basketball, and table tennis. Welcome to my personal space!</p>
+    <img src="tabish.jpeg" alt="Portrait of Tabish">
+  </section>
 
-      footer a:hover {
-        text-decoration: underline;
-      }
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h1>Portfolio</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Description</th>
+          <th>Link</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Photography Portfolio</td>
+          <td>A showcase of my best photos (password: Tabish).</td>
+          <td><a href="https://giraffe-dove-s2he.squarespace.com" target="_blank" rel="noopener noreferrer">View</a></td>
+        </tr>
+        <tr>
+          <td>UX/UI Design Concept</td>
+          <td>A concept design for a mobile app focused on co-op housing.</td>
+          <td><a href="https://www.figma.com/proto/43utt4fzKoGgri1SN7r3DA/GBDA210-group-project?page-id=138%3A63&node-id=760-8953" target="_blank" rel="noopener noreferrer">View</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-      /* Media Queries */
-      @media (max-width: 600px) {
-        nav ul {
-          flex-direction: column;
-        }
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h1>Gallery</h1>
+    <div class="gallery">
+      <img src="drinks.jpg" alt="Assorted drinks on a table">
+      <img src="WoodhouseinWall-min.JPG" alt="A view of Woodhouse Brewery">
+      <img src="gf2-min.JPG" alt="Portrait of a close friend">
+    </div>
+  </section>
 
-        .gallery img {
-          width: 100%;
-          height: auto;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Navigation Bar -->
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h1>Contact Me</h1>
+    <p>Email: <a href="mailto:tnazary@uwaterloo.ca">tnazary@uwaterloo.ca</a></p>
+    <p>Check out my <a href="https://github.com/tnazary" target="_blank">GitHub</a> for more projects.</p>
+  </section>
 
-    <!-- About Section -->
-    <section id="about">
-      <h1>About Me</h1>
-      <p>Hi! I'm Tabish, a passionate individual interested in photography and UX/UI design. Though I’ve only just started my photography journey, I’m excited to capture the world through my lens. I was born in Canada, but my roots are in Afghanistan, giving me a blend of diverse cultural experiences.</p>
-      <p>Besides photography, I love singing and staying active by playing sports like volleyball, basketball, and table tennis. Welcome to my personal space!</p>
-      <img src="tabish.jpeg" alt="Tabish's Photo" width="150" height="150">
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-      <h1>Portfolio</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Project</th>
-            <th>Description</th>
-            <th>Link</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Photography Portfolio</td>
-            <td>A showcase of my best photos (password: Tabish).</td>
-            <td><a href="https://giraffe-dove-s2he.squarespace.com" target="_blank">View</a></td>
-          </tr>
-          <tr>
-            <td>UX/UI Design Concept</td>
-            <td>A concept design for a mobile app focused on co-op housing.</td>
-            <td><a href="https://www.figma.com/proto/43utt4fzKoGgri1SN7r3DA/GBDA210-group-project?page-id=138%3A63&node-id=760-8953&node-type=canvas&viewport=-499%2C623%2C0.12&t=uV2hWBKxIUwYSizF-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=760%3A8953&show-proto-sidebar=1" target="_blank">View</a></td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery">
-      <h1>Gallery</h1>
-      <div class="gallery">
-        <img src="drinks.jpg" alt="Drinks" width="250" height="150">
-        <img src="WoodhouseinWall-min.JPG" alt="Woodhouse In Wall" width="250" height="150">
-        <img src="gf2-min.JPG" alt="Girlfriend" width="250" height="150">
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <h1>Contact Me</h1>
-      <p>Email: <a href="mailto:tnazary@uwaterloo.ca">tnazary@uwaterloo.ca</a></p>
-      <p>Check out my <a href="https://github.com/tnazary" target="_blank">GitHub</a> for more projects.</p>
-      <form action="#" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
-        <label for="message">Message:</label><br>
-        <textarea id="message" name="message" rows="4" required></textarea><br><br>
-        <button type="submit">Submit</button>
-      </form>
-    </section>
-
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">Back to Top</a>
-
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2024 Tabish. All rights reserved.</p>
-    </footer>
-
-    <script>
-      // Back to Top Button Visibility
-      const backToTop = document.querySelector('.back-to-top');
-
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-          backToTop.style.display = 'block';
-        } else {
-          backToTop.style.display = 'none';
-        }
-      });
-    </script>
-  </body>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Tabish. All rights reserved.</p>
+  </footer>
+</body>
 </html>
