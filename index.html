@@ -141,6 +141,25 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
 
+      /* Back to Top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #000;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        display: none;
+        transition: background-color 0.3s;
+      }
+
+      .back-to-top:hover {
+        background-color: #333;
+      }
+
       /* Footer */
       footer {
         text-align: center;
@@ -162,6 +181,18 @@
       footer a:hover {
         text-decoration: underline;
       }
+
+      /* Media Queries */
+      @media (max-width: 600px) {
+        nav ul {
+          flex-direction: column;
+        }
+
+        .gallery img {
+          width: 100%;
+          height: auto;
+        }
+      }
     </style>
   </head>
   <body>
@@ -182,7 +213,7 @@
       <h1>About Me</h1>
       <p>Hi! I'm Tabish, a passionate individual interested in photography and UX/UI design. Though I’ve only just started my photography journey, I’m excited to capture the world through my lens. I was born in Canada, but my roots are in Afghanistan, giving me a blend of diverse cultural experiences.</p>
       <p>Besides photography, I love singing and staying active by playing sports like volleyball, basketball, and table tennis. Welcome to my personal space!</p>
-      <img src="tabish.jpeg" alt="Tabish's Photo">
+      <img src="tabish.jpeg" alt="Tabish's Photo" width="150" height="150">
     </section>
 
     <!-- Portfolio Section -->
@@ -215,9 +246,9 @@
     <section id="gallery">
       <h1>Gallery</h1>
       <div class="gallery">
-        <img src="drinks.jpg" alt="Drinks">
-        <img src="WoodhouseinWall-min.JPG" alt="WooodhouseInWall">
-        <img src="gf2-min.JPG" alt="Girlfriend">
+        <img src="drinks.jpg" alt="Drinks" width="250" height="150">
+        <img src="WoodhouseinWall-min.JPG" alt="Woodhouse In Wall" width="250" height="150">
+        <img src="gf2-min.JPG" alt="Girlfriend" width="250" height="150">
       </div>
     </section>
 
@@ -226,11 +257,36 @@
       <h1>Contact Me</h1>
       <p>Email: <a href="mailto:tnazary@uwaterloo.ca">tnazary@uwaterloo.ca</a></p>
       <p>Check out my <a href="https://github.com/tnazary" target="_blank">GitHub</a> for more projects.</p>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+        <button type="submit">Submit</button>
+      </form>
     </section>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">Back to Top</a>
 
     <!-- Footer -->
     <footer>
       <p>&copy; 2024 Tabish. All rights reserved.</p>
     </footer>
+
+    <script>
+      // Back to Top Button Visibility
+      const backToTop = document.querySelector('.back-to-top');
+
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTop.style.display = 'block';
+        } else {
+          backToTop.style.display = 'none';
+        }
+      });
+    </script>
   </body>
 </html>
